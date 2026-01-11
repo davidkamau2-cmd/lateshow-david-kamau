@@ -30,6 +30,23 @@ def seed():
         db.session.add_all([a1, a2])
         db.session.commit()
 
+        # Restaurants & Pizzas
+        from app.models import Restaurant, Pizza, RestaurantPizza
+
+        r1 = Restaurant(name='Downtown Pizza', capacity=80)
+        r2 = Restaurant(name='Uptown Diner', capacity=40)
+        db.session.add_all([r1, r2])
+
+        p1 = Pizza(name='Margherita', ingredients='tomato,mozzarella,basil')
+        p2 = Pizza(name='Pepperoni', ingredients='tomato,mozzarella,pepperoni')
+        db.session.add_all([p1, p2])
+        db.session.commit()
+
+        rp1 = RestaurantPizza(price=12, restaurant=r1, pizza=p1)
+        rp2 = RestaurantPizza(price=15, restaurant=r1, pizza=p2)
+        db.session.add_all([rp1, rp2])
+        db.session.commit()
+
         print('Seeded database with sample data')
 
 
