@@ -24,3 +24,46 @@ nohup: ignoring input
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 644-608-743
+127.0.0.1 - - [12/Jan/2026 00:32:33] "GET /restaurants HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jan/2026 00:32:35] "[33mGET /restaurants/1 HTTP/1.1[0m" 404 -
+127.0.0.1 - - [12/Jan/2026 00:32:36] "[33mHEAD /restaurants/1 HTTP/1.1[0m" 404 -
+ * Detected change in '/home/user/lateshow-david-kamau/app/routes.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 644-608-743
+ * Detected change in '/home/user/lateshow-david-kamau/app/routes.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 644-608-743
+ * Detected change in '/home/user/lateshow-david-kamau/app/routes.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 644-608-743
+ * Detected change in '/home/user/lateshow-david-kamau/app/routes.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 644-608-743
+ * Detected change in '/home/user/lateshow-david-kamau/app/routes.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 644-608-743
+ * Detected change in '/home/user/lateshow-david-kamau/app/routes.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 644-608-743
+ * Detected change in '/home/user/lateshow-david-kamau/app/routes.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 644-608-743
+ * Detected change in '/home/user/lateshow-david-kamau/app/routes.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 644-608-743
+ * Detected change in '/home/user/lateshow-david-kamau/tests/test_restaurant_pizza.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 644-608-743
+ * Detected change in '/home/user/lateshow-david-kamau/tests/test_restaurant_pizza.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 644-608-743
