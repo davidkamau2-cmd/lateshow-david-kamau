@@ -34,8 +34,12 @@ def test_get_pizzas(client):
 
 
 def test_create_restaurant_pizza(client):
-    # create using seeded ids 1 and 1
-    rv = client.post('/restaurant_pizzas', json={'price': 9, 'restaurant_id': 1, 'pizza_id': 1})
+    # create using first seeded restaurant and pizza ids returned from API
+    rlist = client.get('/restaurants').get_json()
+    plist = client.get('/pizzas').get_json()
+    restaurant_id = rlist[0]['id']
+    pizza_id = plist[0]['id']
+    rv = client.post('/restaurant_pizzas', json={'price': 9, 'restaurant_id': restaurant_id, 'pizza_id': pizza_id})
     assert rv.status_code == 201
     data = rv.get_json()
     assert data['price'] == 9
@@ -43,7 +47,10 @@ def test_create_restaurant_pizza(client):
 
 
 def test_delete_restaurant(client):
-    rv = client.delete('/restaurants/1')
+    # delete the first seeded restaurant returned by the API
+    rlist = client.get('/restaurants').get_json()
+    restaurant_id = rlist[0]['id']
+    rv = client.delete(f'/restaurants/{restaurant_id}')
     assert rv.status_code == 200
     # subsequent get should 404
     rv2 = client.get('/restaurants/1')

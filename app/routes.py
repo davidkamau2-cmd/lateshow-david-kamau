@@ -110,7 +110,6 @@ def delete_restaurant(restaurant_id):
     if not r:
         return jsonify({'error': 'Restaurant not found'}), 404
     data = r.to_dict()
-    from . import db
     db.session.delete(r)
     db.session.commit()
     return jsonify(data)
@@ -142,7 +141,6 @@ def create_restaurant_pizza():
         return jsonify({'errors': ['pizza not found']}), 422
 
     rp = RestaurantPizza(price=price, restaurant=restaurant, pizza=pizza)
-    from . import db
     db.session.add(rp)
     try:
         db.session.commit()
